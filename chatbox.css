@@ -1,0 +1,82 @@
+body {
+    background-color:  #fff;
+    border-radius:10px;
+    font-family: 'Patrick Hand', cursive;
+    margin-left: 2px;
+    margin-top:0px;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    background-color: #128c7e;
+    color:#fff;
+    margin-top:0;   
+    padding-top:2px;
+    font-size:20px;
+    height:50px;
+}
+
+#messages{
+    padding-bottom: 30%;
+}
+
+li {
+    list-style-type: none;
+    margin-bottom: 10px;
+    background-color: #acaaaa;
+    padding: 5px;
+    border-radius: 10px;
+    color: #fff;
+    font-size:17px;
+    width: 50%;
+}
+
+li span {
+    /* font-style: italic; */
+    font-weight: bolder;
+     color:  rgb(61, 56, 85);
+}
+
+#chat {
+    width: 80%;
+    margin: auto;
+}
+
+#message-form {
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    /* background-color: #0d1110; */
+}
+
+input {
+    width: 70%;
+    height: 30px;
+    border-radius:10px;
+    border:1px solid #128c7e;
+}
+
+button {
+    width: 25%;
+    height: 38px;
+    border-radius:10px;
+    border:1px solid #128c7e;
+    background-color: #128c7e;
+    color:#fff;
+    font-size:17px;
+    font-weight:bolder;
+}
+
+.sent {
+    text-align: right;
+    background-color:rgba(175, 175, 197, 0.719);
+    margin-left: 50%;
+}
+
+.sent span {
+    margin-left: 5px;
+    color: rgb(61, 56, 85);
+}
