@@ -35,11 +35,11 @@ const firebaseConfig = {
   
     //auto scroll to bottom
     document
-      .getElementById("messages")
-      .scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+    .getElementById("messages")
+    .scrollIntoView({ behavior: "auto", block: "end", inline: "center" });
   
     // create db collection and send in the data
-    db.ref("messages/" + timestamp).set({
+    db.ref("messages/" + timestamp ).set({
       username,
       message,
     });
@@ -50,6 +50,7 @@ const firebaseConfig = {
   const fetchChat = db.ref("messages/");
   
   // check for new messages using the onChildAdded event listener
+
   fetchChat.on("child_added", function (snapshot) {
     const messages = snapshot.val();
     const message = `<li class=${
