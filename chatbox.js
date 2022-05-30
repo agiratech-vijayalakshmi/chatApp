@@ -21,12 +21,20 @@ const firebaseConfig = {
   // listen for submit event on the form and call the postChat function
   document.getElementById("message-form").addEventListener("submit", sendMessage);
   
+  // function setDate(){
+  //   d = new Date()
+  //   if (m != d.getMinutes()) {
+  //     m = d.getMinutes();
+  //     $('<div class="timestamp">' + d.getHours() + ':' + m + '</div>').appendTo($('.message:last'));
+  //   }
+  // }
   // send message to db
   function sendMessage(e) {
     e.preventDefault();
   
     // get values to be submitted
     const timestamp = Date.now();
+    var d = new Date();
     const messageInput = document.getElementById("message-input");
     const message = messageInput.value;
   
@@ -53,9 +61,12 @@ const firebaseConfig = {
 
   fetchChat.on("child_added", function (snapshot) {
     const messages = snapshot.val();
+    
     const message = `<li class=${
       username === messages.username ? "sent" : "receive"
-    }><span>${messages.username}: </span>${messages.message}</li>`;
+    }> <span>${messages.username}: </span>${messages.message}</li>`
+    
     // append the message on the page
+    
     document.getElementById("messages").innerHTML += message;
   });
